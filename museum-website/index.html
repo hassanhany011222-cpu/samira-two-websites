@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>متحف سميرة الصغير ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="particles" aria-hidden="true"></div>
+<button id="musicBtn" class="music" aria-label="تشغيل / إيقاف الموسيقى">🎵</button>
+
+<!-- Scene 1: museum entrance -->
+<!-- Scene 0: password gate (password = Samira's birthday, checked in script.js) -->
+<section id="gate" class="scene active">
+  <div class="door"><div class="arch">
+    <div class="lock">🔒</div>
+    <h1>المتحف ده ليكي إنتي بس</h1>
+    <p>اكتبي كلمة السر عشان تدخلي</p>
+    <input id="pw" type="text" inputmode="numeric" autocomplete="off" placeholder="يوم / شهر / سنة">
+    <p class="hint">🌙 تنويه: كلمة السر هي اليوم اللي جه فيه القمر بتاعي للدنيا<br><small>(اكتبيه بالأرقام: اليوم ثم الشهر ثم السنة)</small></p>
+    <p class="err" id="pwErr"></p>
+    <button class="btn" id="pwBtn">افتحي المتحف</button>
+  </div></div>
+</section>
+
+<!-- Scene 1: museum entrance -->
+<section id="entrance" class="scene">
+  <div class="spot"></div>
+  <div class="door"><div class="arch">
+    <h1>أهلًا بصاحبة أجمل متحف في العالم ❤️</h1>
+    <p>المكان ده معمول مخصوص عشانك يا كوكو</p>
+    <button class="btn" id="enterBtn">ادخلي يا كوكو ❤️</button>
+  </div></div>
+</section>
+
+<!-- Exhibits are shown one at a time (mug → notebook → letter); filled by script.js -->
+<section id="detail" class="scene"></section>
+
+<script src="script.js"></script>
+</body>
+</html>

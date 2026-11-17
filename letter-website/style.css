@@ -1,0 +1,62 @@
+/* A Letter From Hassan — dark cinematic romance */
+:root{--g:#D8B66A;--cream:#F7EBDD;--pink:#f4a6b8}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Cairo',Tahoma,sans-serif;background:linear-gradient(160deg,#101827,#17191F 50%,#211B24) fixed;color:var(--cream);line-height:2;overflow-x:hidden;padding-bottom:100px}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+#sky span{position:absolute;animation:float linear infinite}
+#sky .star{animation:tw 3s ease-in-out infinite alternate}
+@keyframes float{to{transform:translateY(-115vh);opacity:0}}
+@keyframes tw{from{opacity:.2}to{opacity:1}}
+#gate{position:fixed;inset:0;z-index:50;background:#101827;display:grid;place-items:center;text-align:center;transition:opacity 1s}
+#gate.hide{opacity:0;pointer-events:none}
+.heart-big{font-size:4rem;animation:beat 1.6s infinite;filter:drop-shadow(0 0 20px var(--g))}
+@keyframes beat{50%{transform:scale(1.15)}}
+.btn{margin-top:18px;padding:12px 34px;border-radius:40px;border:0;background:linear-gradient(var(--g),#b8913f);color:#241a10;font:800 1.05rem 'Cairo';cursor:pointer;box-shadow:0 0 24px rgba(216,182,106,.5)}
+main{position:relative;z-index:1}
+.center{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 16px;text-align:center}
+.reveal{opacity:0;transform:translateY(40px);transition:1.2s ease}
+.reveal.in{opacity:1;transform:none}
+/* polaroid */
+.polaroid{position:relative;width:min(330px,86vw);background:#fbf6ee;padding:14px 14px 18px;transform:rotate(-3deg);box-shadow:0 20px 50px rgba(0,0,0,.6),0 0 40px rgba(216,182,106,.25);color:#3a2a1c}
+.pic{background:#e9dccb;min-height:240px;display:grid;place-items:center}
+.pic img{width:100%;display:block}
+.ph{display:none;padding:30px 10px;font-size:.9rem}
+.pic.missing img{display:none}.pic.missing .ph{display:block}
+.polaroid figcaption{margin-top:12px;font-weight:600}
+.tape{position:absolute;top:-14px;left:50%;width:100px;height:28px;transform:translateX(-50%) rotate(2deg);background:rgba(216,182,106,.55)}
+.crown{position:absolute;font-size:2.2rem;top:-42px;right:-10px;transform:rotate(18deg)}
+.gh{position:absolute;font-size:1.3rem;animation:beat 2s infinite}.g1{bottom:60px;left:-14px}.g2{top:40px;right:-16px}
+/* golden letter */
+.paper{position:relative;max-width:640px;background:linear-gradient(#f9efe0,#f1e0c5);color:#3b2a1a;padding:44px 28px;border:3px double var(--g);outline:1px solid var(--g);outline-offset:-12px;box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 50px rgba(216,182,106,.3)}
+.paper h2{color:#8a5a1c;margin-bottom:18px;font-size:clamp(1.3rem,4.5vw,1.8rem)}
+.paper p{margin-bottom:14px;font-size:1.08rem;opacity:0;transform:translateY(12px);transition:.9s}
+.paper p.in{opacity:1;transform:none}
+.corner{position:absolute;width:30px;height:30px;border:3px solid var(--g)}
+.tl{top:6px;right:6px;border-left:0;border-bottom:0}.tr{top:6px;left:6px;border-right:0;border-bottom:0}
+.bl{bottom:6px;right:6px;border-left:0;border-top:0}.br{bottom:6px;left:6px;border-right:0;border-top:0}
+.crown-s{font-size:2rem;filter:drop-shadow(0 0 10px var(--g))}
+.sign{font-weight:800;color:#8a5a1c;margin-top:20px}
+.ily{font-weight:800;letter-spacing:2px;color:var(--g)}.paper .ily{color:#b3243f}
+/* voice */
+.voice{width:min(420px,92vw);padding:28px 22px;border-radius:24px;border:1px solid rgba(216,182,106,.5);background:rgba(33,27,36,.8);box-shadow:0 0 40px rgba(216,182,106,.2)}
+.mic{font-size:1.8rem;filter:drop-shadow(0 0 12px var(--pink))}
+.sub{opacity:.75;margin-bottom:12px}
+.vrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:10px 0}
+.round{width:68px;height:68px;border-radius:50%;border:2px solid var(--g);background:radial-gradient(#3b2f3f,#211B24);color:var(--g);font-size:1.5rem;cursor:pointer;box-shadow:0 0 24px rgba(216,182,106,.4)}
+.round.sm{width:44px;height:44px;font-size:1rem}
+.waves,.eq{display:flex;align-items:center;gap:4px;height:40px}
+.waves i,.eq i{width:5px;height:8px;border-radius:3px;background:var(--pink);transition:height .3s}
+.playing i{animation:wave .9s ease-in-out infinite alternate}
+.playing i:nth-child(2n){animation-delay:.2s}.playing i:nth-child(3n){animation-delay:.4s}
+@keyframes wave{to{height:34px}}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.15);cursor:pointer;direction:ltr}
+#vFill{height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--g),var(--pink))}
+.times{display:flex;justify-content:space-between;font-size:.85rem;opacity:.8;direction:ltr}
+.err{color:var(--pink);font-size:.85rem}
+/* fixed song player */
+.player{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:12px;padding:8px 18px;border-radius:40px;background:rgba(16,24,39,.92);border:1px solid var(--g);box-shadow:0 0 30px rgba(216,182,106,.3);max-width:94vw}
+.meta{display:flex;flex-direction:column;line-height:1.3}.meta small{opacity:.7}
+.eq{height:26px}.eq.playing i{animation-name:wave}
+/* final */
+.final h2{font-size:clamp(1.6rem,6vw,2.4rem);color:var(--g);margin:8px 0}
+.glow-heart{font-size:5rem;animation:beat 1.8s infinite;filter:drop-shadow(0 0 30px #D8B66A)}

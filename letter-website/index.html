@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>رسالة من حسن ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+
+<!-- Gate: gives us the first user interaction needed to play audio -->
+<div id="gate"><div class="gate-in"><div class="heart-big">💛</div><p>في رسالة مستنياكي يا كوكو</p><button class="btn" id="openBtn">افتحي الرسالة ❤️</button></div></div>
+
+<main>
+  <!-- Polaroid photo -->
+  <section class="center">
+    <figure class="polaroid">
+      <span class="tape"></span><span class="crown c1">👑</span><span class="gh g1">💛</span><span class="gh g2">💛</span>
+      <div class="pic" id="pic"><img src="assets/images/couple-photo.jpg" alt="صورتنا"><div class="ph">ضيفي الصورة دي:<br>assets/images/couple-photo.jpg</div></div>
+      <figcaption>صورتنا هتحط هنا 📸<br><b>أحلى سميرة 👑</b></figcaption>
+    </figure>
+  </section>
+
+  <!-- Golden letter -->
+  <section class="center">
+    <article class="paper reveal">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div class="crown-s">👑</div>
+      <h2>كوكو... يا أجمل حاجة في قلبي 👑</h2>
+      <div id="letterText"></div>
+      <p class="sign">حبيب قلبك سونا، حسن 💛</p>
+      <p class="ily">I LOVE YOU FOREVER ❤️</p>
+    </article>
+  </section>
+
+  <!-- Voice message -->
+  <section class="center">
+    <div class="voice reveal">
+      <div class="mic">🎙️</div>
+      <h3>كلمتين من قلبي ليكي ❤️</h3>
+      <p class="sub">رسالة صوتية خاصة من حسن</p>
+      <div class="vrow">
+        <button id="vBtn" class="round" aria-label="تشغيل الرسالة الصوتية">▶</button>
+        <div class="waves" id="waves"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="bar" id="vBar"><div id="vFill"></div></div>
+      <div class="times"><span id="vCur">0:00</span><span id="vDur">0:00</span></div>
+      <p class="err" id="vErr"></p>
+    </div>
+  </section>
+
+  <!-- Final scene -->
+  <section class="center final reveal">
+    <div class="crown-s">👑</div>
+    <div class="glow-heart">💛</div>
+    <h2>إنتي أجمل حكاية حصلتلي ❤️</h2>
+    <p class="ily">I LOVE YOU FOREVER ❤️</p>
+  </section>
+</main>
+
+<!-- Song player: letter-song.mp3 is BOTH the background music and this player -->
+<div class="player" id="player">
+  <button id="sBtn" class="round sm" aria-label="تشغيل / إيقاف الأغنية">▶</button>
+  <div class="meta"><b>كامل الأوصاف</b><small>عبد الحليم حافظ</small></div>
+  <div class="eq" id="eq"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
