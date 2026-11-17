@@ -1,6 +1,6 @@
 /* ===== Configuration ===== */
 // Replace with the real link of the second website after publishing it.
-const SECOND_WEBSITE_URL = "YOUR_SECOND_WEBSITE_URL";
+const SECOND_WEBSITE_URL = "https://hassanhany011222-cpu.github.io/samira-two-websites/letter-website/";
 const MUSIC_SRC = "assets/audio/museum-music.mp3";
 
 /* ===== Exhibit content ===== */
